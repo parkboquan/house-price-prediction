@@ -104,3 +104,7 @@ Sau đó có thể tạo Pull Request từ `version-2-house-price` vào `main` t
 ## Lưu ý
 
 Nếu repository trên GitHub đã có README được tạo sẵn, khi đẩy một repository local có lịch sử Git riêng có thể phát sinh merge conflict. Cách đơn giản là tạo repository GitHub **trống**, không chọn khởi tạo README/.gitignore/License, rồi push repository local lên.
+## Version 3
+
+- Cập nhật tài liệu dự án.
+- Tiếp tục sử dụng mô hình Linear Regression để dự đoán giá nhà.
