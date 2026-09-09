@@ -70,6 +70,27 @@ def main():
     print(
         f"\nDự báo căn nhà mẫu: {predicted_price:.2f} tỷ VNĐ"
     )
+    print("\n--- DỰ BÁO GIÁ NHÀ CHO NGƯỜI DÙNG ---")
+
+    area = float(input("Diện tích (m2): "))
+    bedrooms = int(input("Số phòng ngủ: "))
+    bathrooms = int(input("Số phòng tắm: "))
+    location_score = float(input("Điểm vị trí (1-10): "))
+    age_years = float(input("Tuổi căn nhà (năm): "))
+    distance_center_km = float(input("Khoảng cách đến trung tâm (km): "))
+
+    user_house = pd.DataFrame({
+        "area_m2": [area],
+        "bedrooms": [bedrooms],
+        "bathrooms": [bathrooms],
+        "location_score": [location_score],
+        "age_years": [age_years],
+        "distance_center_km": [distance_center_km]
+    })
+
+    predicted_price = model.predict(user_house)[0]
+
+    print(f"\nGiá nhà dự đoán: {predicted_price:.2f} tỷ VNĐ")
 
 
 if __name__ == "__main__":
